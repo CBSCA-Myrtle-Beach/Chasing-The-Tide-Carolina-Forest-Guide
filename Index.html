@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carolina Forest Guide | Chasing the Tides Group – Coldwell Banker Sea Coast Advantage</title>
+<meta name="description" content="Your complete guide to living in Carolina Forest, Myrtle Beach. Neighborhoods, schools, lifestyle, and real estate insights from the Chasing the Tides Group.">
+
+<!-- Google Fonts fallback -->
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  /* ─── Self-Hosted CB Brand Fonts ─── */
+  @font-face { font-family: 'AGaramondPro'; src: url('fonts/AGaramondPro-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'AGaramondPro'; src: url('fonts/AGaramondPro-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'AGaramondPro'; src: url('fonts/AGaramondPro-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'AGaramondPro'; src: url('fonts/AGaramondPro-BoldItalic.otf') format('opentype'); font-weight: 700; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Geometos'; src: url('fonts/Geometos.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Bauziet'; src: url('fonts/BauzietNorm-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Roboto'; src: url('fonts/Roboto-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Roboto'; src: url('fonts/Roboto-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Roboto'; src: url('fonts/Roboto-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Roboto'; src: url('fonts/Roboto-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+
+  /* ─── Design Tokens ─── */
+  :root {
+    --deep-tide: #0c1a24;
+    --midnight-coast: #111f2b;
+    --dark-water: #162736;
+    --salt-air: #8bafbf;
+    --driftwood: #9ca8b0;
+    --warm-gold: #c9a96e;
+    --gold-hover: #d4b37c;
+    --sand: #f5f0e8;
+    --white-foam: #ffffff;
+    --glass: rgba(22, 39, 54, 0.55);
+    --glass-border: rgba(139, 175, 191, 0.12);
+    --serif: 'AGaramondPro', 'EB Garamond', Georgia, serif;
+    --sans: 'Geometos', 'Roboto', sans-serif;
+    --body: 'Roboto', sans-serif;
+  }
+
+  /* ─── Reset & Base ─── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    background: var(--deep-tide);
+    color: var(--driftwood);
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  /* ─── Navigation ─── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(180deg, rgba(12,26,36,0.95) 0%, rgba(12,26,36,0.7) 70%, transparent 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+  }
+  .nav.scrolled {
+    background: rgba(12,26,36,0.97);
+    padding: 14px 48px;
+    box-shadow: 0 1px 0 var(--glass-border);
+  }
+  .nav-brand {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .brand-name {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    font-weight: 400;
+  }
+  .brand-sub {
+    font-family: var(--body);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--driftwood);
+    opacity: 0.7;
+  }
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--driftwood);
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--warm-gold);
+    transform: scaleX(0); transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--warm-gold); }
+  .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+  /* ─── Hero ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(165deg, var(--deep-tide) 0%, var(--midnight-coast) 40%, var(--dark-water) 100%);
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 80%, rgba(201,169,110,0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 20%, rgba(139,175,191,0.05) 0%, transparent 60%);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 860px; padding: 0 32px;
+  }
+  .hero-tag {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.3s forwards;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+    font-weight: 400;
+    color: var(--white-foam);
+    line-height: 1.15;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--warm-gold);
+  }
+  .hero-subtitle {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--salt-air);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.7s forwards;
+  }
+  .hero-ctas {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.9s forwards;
+  }
+  .btn-primary, .btn-outline {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+  .btn-primary {
+    background: var(--warm-gold);
+    color: var(--deep-tide);
+    border: 1px solid var(--warm-gold);
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--warm-gold);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--salt-air);
+    border: 1px solid var(--glass-border);
+  }
+  .btn-outline:hover {
+    border-color: var(--warm-gold);
+    color: var(--warm-gold);
+  }
+
+  .hero-scroll {
+    position: absolute; bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeUp 0.8s 1.2s forwards;
+  }
+  .hero-scroll span {
+    display: block;
+    width: 1px; height: 48px;
+    background: linear-gradient(to bottom, var(--warm-gold), transparent);
+    margin: 0 auto;
+  }
+  .hero-scroll small {
+    font-family: var(--sans);
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--driftwood);
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* ─── Quick Stats ─── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .stat-item {
+    padding: 36px 24px;
+    text-align: center;
+    border-right: 1px solid var(--glass-border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-number {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--warm-gold);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-label {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--driftwood);
+  }
+
+  /* ─── Sections ─── */
+  section { padding: 100px 48px; }
+  .section-tag {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 400;
+    color: var(--white-foam);
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .section-body {
+    font-family: var(--body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--driftwood);
+    line-height: 1.85;
+    max-width: 680px;
+  }
+
+  /* ─── Story Section ─── */
+  .story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .story-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: var(--dark-water);
+    border: 1px solid var(--glass-border);
+    overflow: hidden;
+  }
+  .story-visual .placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--driftwood);
+    opacity: 0.4;
+    background: linear-gradient(135deg, var(--dark-water) 0%, var(--midnight-coast) 100%);
+  }
+
+  /* ─── Neighborhoods Grid ─── */
+  .neighborhoods {
+    background: var(--midnight-coast);
+  }
+  .neighborhoods-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 64px;
+  }
+  .neighborhoods-header .section-body { margin: 0 auto; }
+  .hood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .hood-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 40px 32px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .hood-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--warm-gold);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  .hood-card:hover::before { transform: scaleX(1); }
+  .hood-card:hover { border-color: rgba(201,169,110,0.2); transform: translateY(-4px); }
+  .hood-badge {
+    font-family: var(--sans);
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  .hood-name {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--white-foam);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+  .hood-desc {
+    font-family: var(--body);
+    font-size: 0.85rem;
+    color: var(--driftwood);
+    line-height: 1.75;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  .hood-specs {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .hood-spec {
+    font-family: var(--sans);
+    font-size: 0.56rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--salt-air);
+    padding: 5px 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 0;
+  }
+
+  /* ─── Schools Section ─── */
+  .schools {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .schools-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .school-list {
+    display: flex; flex-direction: column; gap: 24px;
+    margin-top: 40px;
+  }
+  .school-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .school-name {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--white-foam);
+    font-weight: 400;
+  }
+  .school-detail {
+    font-family: var(--body);
+    font-size: 0.78rem;
+    color: var(--driftwood);
+    margin-top: 4px;
+  }
+  .school-grade {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--warm-gold);
+    letter-spacing: 0.04em;
+    min-width: 40px;
+    text-align: right;
+  }
+
+  /* ─── Lifestyle Section ─── */
+  .lifestyle {
+    background: var(--midnight-coast);
+  }
+  .lifestyle-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 64px;
+  }
+  .lifestyle-header .section-body { margin: 0 auto; }
+  .lifestyle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .life-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 36px 28px;
+    transition: all 0.35s ease;
+  }
+  .life-card:hover {
+    border-color: rgba(201,169,110,0.2);
+    transform: translateY(-3px);
+  }
+  .life-icon {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .life-title {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--white-foam);
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  .life-desc {
+    font-family: var(--body);
+    font-size: 0.82rem;
+    color: var(--driftwood);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  /* ─── Market Snapshot ─── */
+  .market-snapshot {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .market-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .market-value {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    color: var(--warm-gold);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .market-label {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--driftwood);
+    margin-bottom: 12px;
+  }
+  .market-note {
+    font-family: var(--body);
+    font-size: 0.78rem;
+    color: var(--salt-air);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ─── CTA Section ─── */
+  .cta-section {
+    background: linear-gradient(165deg, var(--midnight-coast) 0%, var(--deep-tide) 100%);
+    text-align: center;
+    padding: 120px 48px;
+    position: relative;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,169,110,0.04) 0%, transparent 70%);
+  }
+  .cta-inner {
+    position: relative; z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .cta-inner .section-title {
+    margin-bottom: 16px;
+  }
+  .cta-body {
+    font-family: var(--body);
+    font-size: 0.95rem;
+    color: var(--driftwood);
+    line-height: 1.85;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+  .cta-buttons {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .cta-contact {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; flex-wrap: wrap;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--glass-border);
+  }
+  .cta-contact a {
+    color: var(--warm-gold);
+    font-size: 0.88rem;
+    transition: color 0.3s;
+  }
+  .cta-contact a:hover { color: var(--gold-hover); }
+  .cta-divider {
+    color: rgba(139,175,191,0.25);
+    font-size: 0.9rem;
+  }
+  .cta-address {
+    color: var(--salt-air);
+    font-size: 0.85rem;
+    font-weight: 300;
+  }
+
+  /* ─── Agent Photo ─── */
+  .agent-photo {
+    margin-bottom: 32px;
+  }
+  .agent-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid var(--warm-gold);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    margin: 0 auto;
+  }
+
+  /* ─── Agent Block ─── */
+  .agent-block {
+    display: flex; gap: 48px; justify-content: center; align-items: center;
+    margin-bottom: 36px;
+  }
+  .agent-item { text-align: center; }
+  .agent-name {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--white-foam);
+    font-weight: 400;
+  }
+  .agent-role {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--driftwood);
+    margin-top: 4px;
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    padding: 40px 48px;
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-brand {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--driftwood);
+  }
+  .footer-brand span {
+    display: block;
+    font-family: var(--body);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    margin-top: 4px;
+    opacity: 0.6;
+  }
+  .footer-legal {
+    font-family: var(--body);
+    font-size: 0.68rem;
+    color: var(--driftwood);
+    opacity: 0.5;
+    text-align: right;
+    max-width: 480px;
+    line-height: 1.5;
+  }
+
+  /* ─── Animations ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── Responsive: 1024px ─── */
+  @media (max-width: 1024px) {
+    .story { grid-template-columns: 1fr; gap: 48px; }
+    .story-visual { max-height: 400px; aspect-ratio: 16/9; }
+    .hood-grid { grid-template-columns: repeat(2, 1fr); }
+    .schools-content { grid-template-columns: 1fr; gap: 48px; }
+    .lifestyle-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .market-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ─── Responsive: 768px ─── */
+  @media (max-width: 768px) {
+    .nav { padding: 16px 24px; }
+    .nav.scrolled { padding: 12px 24px; }
+    .nav-links { display: none; }
+    section { padding: 72px 24px; }
+    .hero-content { padding: 0 20px; }
+    .hero-ctas { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
+    .hood-grid { grid-template-columns: 1fr; }
+    .lifestyle-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: 1fr; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--glass-border); }
+    .stat-item:last-child { border-bottom: none; }
+    .market-grid { grid-template-columns: 1fr; }
+    .hero-scroll { display: none; }
+    .agent-block { flex-direction: column; gap: 24px; }
+    .footer { flex-direction: column; gap: 24px; text-align: center; }
+    .footer-legal { text-align: center; }
+    .cta-contact { flex-direction: column; gap: 8px; }
+    .cta-divider { display: none; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    <div class="brand-name">Chasing the Tides Group</div>
+    <div class="brand-sub">Coldwell Banker Sea Coast Advantage</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#neighborhoods">Neighborhoods</a></li>
+    <li><a href="#schools">Schools</a></li>
+    <li><a href="#lifestyle">Lifestyle</a></li>
+    <li><a href="https://connectwithusctt.carrd.co" target="_blank">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Your Complete Guide to</div>
+    <h1 class="hero-title">Carolina Forest, <em>Myrtle Beach</em></h1>
+    <p class="hero-subtitle">Over 9,000 acres of tree-lined neighborhoods, top-rated schools, and a community that feels like home — just 10 minutes from the beach.</p>
+    <div class="hero-ctas">
+      <a href="https://www.chasingthetides.com/" target="_blank" class="btn-primary">Explore Homes</a>
+      <a href="https://carolinaforestcttcb.carrd.co" target="_blank" class="btn-outline">Featured Neighborhoods</a>
+      <a href="https://www.chasingthetides.com/" target="_blank" class="btn-outline">Visit Our Website</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span></span>
+    <small>Scroll</small>
+  </div>
+</section>
+
+<!-- ── Quick Stats ── -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-number">9,000+</div>
+    <div class="stat-label">Acres</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">30+</div>
+    <div class="stat-label">Neighborhoods</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">A−</div>
+    <div class="stat-label">Niche School Rating</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">10 min</div>
+    <div class="stat-label">To the Beach</div>
+  </div>
+</div>
+
+<!-- ── About / Story ── -->
+<section id="about">
+  <div class="story">
+    <div class="story-text reveal">
+      <div class="section-tag">The Community</div>
+      <h2 class="section-title">Where Families Put<br>Down Roots</h2>
+      <div class="section-body">
+        <p>Nestled between the sandy shores of Myrtle Beach and the historic town of Conway, Carolina Forest is one of the fastest-growing master-planned communities along the Grand Strand. What started as International Paper timberland in the 1990s has grown into a thriving community of over 30 distinct neighborhoods — each with its own personality, but all sharing the same family-first feel.</p>
+        <br>
+        <p>Nearly half of the total land has been preserved as green space, giving Carolina Forest a canopy-covered character that sets it apart from the typical beach town. Tree-lined streets, interconnected walking trails, and neighborhood parks create an everyday quality of life that's hard to beat — and you're still just a short drive from the sand.</p>
+        <br>
+        <p>With easy access to Highways 501, 31, and International Drive, daily errands, the airport, and the beach are all within reach. It's the kind of place people move to and never want to leave.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Neighborhoods ── -->
+<section id="neighborhoods" class="neighborhoods">
+  <div class="neighborhoods-header reveal">
+    <div class="section-tag">Neighborhoods</div>
+    <h2 class="section-title">Find Your Place in<br>Carolina Forest</h2>
+    <div class="section-body">From luxury waterfront estates to affordable family homes, Carolina Forest offers something for every lifestyle and budget. Here are some of the most sought-after communities.</div>
+  </div>
+
+  <div class="hood-grid">
+    <a href="https://carolinaforestluxurywb.carrd.co/" target="_blank" class="hood-card reveal" style="display:block; cursor:pointer;">
+      <div class="hood-badge">Luxury · Gated</div>
+      <h3 class="hood-name">Waterbridge</h3>
+      <p class="hood-desc">A premier gated community surrounded by 120 acres of protected woodlands. Coastal cottage-style homes, 80+ acres of lakes, and SC's largest residential swimming pool headline the resort-caliber amenities.</p>
+      <div class="hood-specs">
+        <span class="hood-spec">Gated</span>
+        <span class="hood-spec">Lakefront</span>
+        <span class="hood-spec">Boat Launch</span>
+        <span class="hood-spec">Fitness</span>
+      </div>
+    </a>
+
+    <a href="https://carolinaforestluxurypl.carrd.co" target="_blank" class="hood-card reveal" style="display:block; cursor:pointer;">
+      <div class="hood-badge">Luxury · Lakefront</div>
+      <h3 class="hood-name">Plantation Lakes</h3>
+      <p class="hood-desc">Custom-built luxury homes wrapped around 170 acres of lakes and ponds. Residents boat through 15 miles of stocked shoreline and enjoy two pools, tennis, basketball, and a sprawling amenities center.</p>
+      <div class="hood-specs">
+        <span class="hood-spec">Custom Homes</span>
+        <span class="hood-spec">Lake Boating</span>
+        <span class="hood-spec">2 Pools</span>
+        <span class="hood-spec">Tennis</span>
+      </div>
+    </a>
+
+    <a href="https://thebluffsonthewaterway.carrd.co/" target="_blank" class="hood-card reveal" style="display:block; cursor:pointer;">
+      <div class="hood-badge">Waterfront · Gated</div>
+      <h3 class="hood-name">The Bluffs on the Waterway</h3>
+      <p class="hood-desc">An elegant gated community directly on the Intracoastal Waterway. Private boat landing, on-site boat storage, and direct ICW lots make this one of Carolina Forest's most coveted waterfront addresses.</p>
+      <div class="hood-specs">
+        <span class="hood-spec">Gated</span>
+        <span class="hood-spec">ICW Direct</span>
+        <span class="hood-spec">Boat Landing</span>
+        <span class="hood-spec">Custom Homes</span>
+      </div>
+    </a>
+
+    <div class="hood-card reveal">
+      <div class="hood-badge">Modern · Amenity-Rich</div>
+      <h3 class="hood-name">The Parks</h3>
+      <p class="hood-desc">A newer community known for its green spaces, lazy river pool, and golf-cart-friendly streets. Natural gas, walking trails to the library, and a central Carolina Forest location make it a standout.</p>
+      <div class="hood-specs">
+        <span class="hood-spec">Lazy River</span>
+        <span class="hood-spec">Golf Cart Friendly</span>
+        <span class="hood-spec">Natural Gas</span>
+        <span class="hood-spec">Trails</span>
+      </div>
+    </div>
+
+    <div class="hood-card reveal">
+      <div class="hood-badge">Waterfront · Gated</div>
+      <h3 class="hood-name">Waterway Palms Plantation</h3>
+      <p class="hood-desc">A gated community on the Intracoastal Waterway with Charleston-inspired architecture. Custom homes, a private boat ramp, and elegant amenities including pools, tennis, and a grand clubhouse.</p>
+      <div class="hood-specs">
+        <span class="hood-spec">ICW Access</span>
+        <span class="hood-spec">Boat Ramp</span>
+        <span class="hood-spec">Custom Build</span>
+        <span class="hood-spec">Pool</span>
+      </div>
+    </div>
+
+    <div class="hood-card reveal">
+      <div class="hood-badge">Established · Mature</div>
+      <h3 class="hood-name">Waterford Plantation</h3>
+      <p class="hood-desc">One of Carolina Forest's original neighborhoods with mature landscaping and tree-shaded streets. Walking distance to the award-winning Carolina Forest Elementary, with a full amenity center.</p>
+      <div class="hood-specs">
+        <span class="hood-spec">Walk to School</span>
+        <span class="hood-spec">Jr Olympic Pool</span>
+        <span class="hood-spec">Tennis</span>
+        <span class="hood-spec">Playground</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Schools ── -->
+<section id="schools">
+  <div class="schools reveal">
+    <div class="schools-content">
+      <div>
+        <div class="section-tag">Education</div>
+        <h2 class="section-title">Schools That Families<br>Move Here For</h2>
+        <div class="section-body">Carolina Forest is served by some of the highest-rated public schools in the Myrtle Beach area and across South Carolina. The district consistently earns A-range grades on Niche, and the school community is one of the top reasons families choose to relocate here.</div>
+      </div>
+      <div>
+        <div class="school-list">
+          <div class="school-item">
+            <div>
+              <div class="school-name">Carolina Forest High School</div>
+              <div class="school-detail">Grades 9–12 · 3,181 students · #3 Best Public HS in Myrtle Beach Area</div>
+            </div>
+            <div class="school-grade">A−</div>
+          </div>
+          <div class="school-item">
+            <div>
+              <div class="school-name">River Oaks Elementary</div>
+              <div class="school-detail">Grades PK–5 · 1,415 students · #6 Best Public ES in Myrtle Beach Area</div>
+            </div>
+            <div class="school-grade">A</div>
+          </div>
+          <div class="school-item">
+            <div>
+              <div class="school-name">Carolina Forest Elementary</div>
+              <div class="school-detail">Grades PK–5 · 1,306 students · Blue Ribbon recognition</div>
+            </div>
+            <div class="school-grade">A−</div>
+          </div>
+          <div class="school-item">
+            <div>
+              <div class="school-name">Ocean Bay Elementary</div>
+              <div class="school-detail">Grades PK–5 · Carolina Forest district</div>
+            </div>
+            <div class="school-grade">A−</div>
+          </div>
+          <div class="school-item">
+            <div>
+              <div class="school-name">Ten Oaks Middle School</div>
+              <div class="school-detail">Grades 6–8 · Horry County Schools</div>
+            </div>
+            <div class="school-grade">A−</div>
+          </div>
+          <div class="school-item">
+            <div>
+              <div class="school-name">Ocean Bay Middle School</div>
+              <div class="school-detail">Grades 6–8 · Carolina Forest district</div>
+            </div>
+            <div class="school-grade">A−</div>
+          </div>
+        </div>
+        <p style="font-size: 0.72rem; color: var(--driftwood); opacity: 0.5; margin-top: 16px; font-style: italic;">Niche.com 2026 grades. Ratings subject to change. Two new elementary schools opened in the Carolina Forest area for the 2025–2026 school year as part of a district expansion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Lifestyle ── -->
+<section id="lifestyle" class="lifestyle">
+  <div class="lifestyle-header reveal">
+    <div class="section-tag">Lifestyle</div>
+    <h2 class="section-title">More Than Just a<br>Place to Live</h2>
+    <div class="section-body">Carolina Forest blends suburban convenience with coastal energy. Here's what everyday life actually looks like.</div>
+  </div>
+
+  <div class="lifestyle-grid">
+    <div class="life-card reveal">
+      <span class="life-icon">🛒</span>
+      <h4 class="life-title">Shopping & Errands</h4>
+      <p class="life-desc">Tanger Outlets on Hwy 501, plus a growing mix of grocery stores, pharmacies, and everyday services along Carolina Forest Blvd and International Drive. You rarely need to leave the area.</p>
+    </div>
+    <div class="life-card reveal">
+      <span class="life-icon">🍽️</span>
+      <h4 class="life-title">Dining</h4>
+      <p class="life-desc">The restaurant scene is growing fast — from craft burgers and sushi to tacos and Southern staples. New spots open regularly along Carolina Forest Boulevard, and you're still a short drive from the Grand Strand's full dining scene.</p>
+    </div>
+    <div class="life-card reveal">
+      <span class="life-icon">🌲</span>
+      <h4 class="life-title">Outdoors & Recreation</h4>
+      <p class="life-desc">The Hulk mountain bike and run park, Lewis Ocean Bay Heritage Preserve, walking trails through neighborhoods, and community pools and recreation centers. Active living is built into the fabric here.</p>
+    </div>
+    <div class="life-card reveal">
+      <span class="life-icon">⛳</span>
+      <h4 class="life-title">Golf</h4>
+      <p class="life-desc">Legends Golf Resort, Myrtle Beach National, and World Tour Golf Links are all minutes away. Carolina Forest puts you in the heart of the Grand Strand's golf corridor without the tourist traffic.</p>
+    </div>
+    <div class="life-card reveal">
+      <span class="life-icon">🏖️</span>
+      <h4 class="life-title">Beach Access</h4>
+      <p class="life-desc">Just 10–15 minutes to the sand via Hwy 31 or International Drive. Close enough to enjoy on a weekday evening, far enough inland to avoid the congestion and price tags of beachfront living.</p>
+    </div>
+    <div class="life-card reveal">
+      <span class="life-icon">🚗</span>
+      <h4 class="life-title">Connectivity</h4>
+      <p class="life-desc">Easy access to Hwy 501, SC-31, and International Drive. The Myrtle Beach airport is 15 minutes away. Whether you commute along the Grand Strand or work remotely, the location just works.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Market Snapshot ── -->
+<section>
+  <div class="market-snapshot reveal">
+    <div style="text-align: center; max-width: 700px; margin: 0 auto 48px;">
+      <div class="section-tag">Market Snapshot</div>
+      <h2 class="section-title">Carolina Forest<br>Real Estate at a Glance</h2>
+      <div class="section-body" style="margin: 0 auto;">A high-demand market with a wide range of price points — from affordable townhomes and condos to luxury lakefront estates.</div>
+    </div>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="market-value">$250K–$1M+</div>
+        <div class="market-label">Price Range</div>
+        <div class="market-note">From starter townhomes in The Farm to custom estates in Plantation Lakes and Waterbridge.</div>
+      </div>
+      <div class="market-card">
+        <div class="market-value">30+</div>
+        <div class="market-label">Active Communities</div>
+        <div class="market-note">New construction and established neighborhoods with a range of home styles and lot sizes.</div>
+      </div>
+      <div class="market-card">
+        <div class="market-value">High</div>
+        <div class="market-label">Buyer Demand</div>
+        <div class="market-note">Strong relocation interest from the Northeast and Midwest, driven by schools, affordability, and lifestyle.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Section ── -->
+<section id="contact" class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="section-tag">Let's Connect</div>
+    <h2 class="section-title">Ready to Explore<br>Carolina Forest?</h2>
+    <p class="cta-body">Whether you're relocating to the area, searching for more space, or thinking about selling while the market is strong — we're here with honest guidance and zero pressure. We know this community inside and out, and we'd love to help you find your place in it.</p>
+
+    <div class="agent-photo">
+      <img src="eric-amanda.png" alt="Eric Galvin and Amanda Knapp-Galvin — Chasing the Tides Group">
+    </div>
+
+    <div class="agent-block">
+      <div class="agent-item">
+        <div class="agent-name">Eric Galvin</div>
+        <div class="agent-role">Chasing the Tides Group</div>
+      </div>
+      <div class="agent-item">
+        <div class="agent-name">Amanda Knapp-Galvin</div>
+        <div class="agent-role">Chasing the Tides Group</div>
+      </div>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="https://connectwithusctt.carrd.co" target="_blank" class="btn-primary">Get in Touch</a>
+      <a href="https://connectwithusctt.carrd.co" target="_blank" class="btn-outline">Request Home Valuation</a>
+      <a href="https://www.chasingthetides.com/" target="_blank" class="btn-outline">Visit Our Website</a>
+    </div>
+
+    <div class="cta-contact">
+      <a href="mailto:coastallivingwithamanda@gmail.com">coastallivingwithamanda@gmail.com</a>
+      <span class="cta-divider">|</span>
+      <a href="tel:8436500998">(843) 650-0998</a>
+      <span class="cta-divider">|</span>
+      <span class="cta-address">3888 Renee Dr, Myrtle Beach, SC 29579</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="footer-brand">
+    Chasing the Tides Group
+    <span>Coldwell Banker Sea Coast Advantage · Carolina Forest Office</span>
+  </div>
+  <div class="footer-legal">
+    © 2026 Coldwell Banker Sea Coast Advantage. All rights reserved. Each office is independently owned and operated. Information deemed reliable but not guaranteed.
+  </div>
+</footer>
+
+<!-- ── Scripts ── -->
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
